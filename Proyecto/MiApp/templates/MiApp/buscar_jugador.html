@@ -1,0 +1,18 @@
+<form action="" method="get">
+
+    <input type="text" name="apellido" id="apellido">
+
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% if jugadores %}
+
+    <ul>
+    {% for player in jugadores%}
+        <li>El jugador {{player.nombre}} {{player.apellido}} se encuentra en la base </li>
+    {% endfor%}
+    <ul>
+{%else%}
+        <p>No hay datos</p>
+{%endif%}

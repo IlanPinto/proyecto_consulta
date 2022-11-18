@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  {% load static %}
+  <title>Basketball</title>
+  <link rel="stylesheet" href="{% static 'MiApp/style.css' %}" type="text/css" charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+<div id="wrapper">
+  <div id="man">
+    <h1><img src="{% static 'MiApp/images/logo.gif' %}" width="778" height="80" alt="BIENVENIDOS AL BLOG DE BASKETBALL"></h1>
+    
+    <div id="body">
+      <div class="drk" id="welcome">
+        <div class="top">
+          <div class="bot">
+            <div class="picbar"><img src="{% static 'MiApp/images/pic_2.jpg' %}" width="458" height="200" alt="Pic 2"></div>
+            <div class="pad">
+              <h2><img src="{% static 'MiApp/images/h_welcome_to_our_club.gif' %}" width="137" height="17" alt="Welcome To Our Club" /></h2>
+              <p>
+
+                El mejor noticiero de basket del mundo!.</p>
+              <p class="more"><a href="{% url 'jugadores' %}" class="diamond">Jugadores</a></p>
+              <p class="more"><a href="{% url 'entrenadores' %}" class="diamond">Entrenadores</a></p>
+              <p class="more"><a href="{% url 'torneos' %}" class="diamond">Torneos</a></p>
+              <p class="more"><a href="{% url 'FormularioJugadores' %}" class="diamond">Crear Jugadores</a></p>
+              <p class="more"><a href="{% url 'FormularioEntrenadores' %}" class="diamond">Crear Entrenadores</a></p>
+              <p class="more"><a href="{% url 'FormularioTorneos' %}" class="diamond">Crear Torneos</a></p>
+              <p class="more"><a href="{% url 'BuscarJugador' %}" class="diamond">Buscar Jugador</a></p>
+              <p class="more"><a href="{% url 'MostrarJugadores' %}" class="diamond">Mostrar Jugadores</a></p>
+              <p class="more"><a href="{% url 'List' %}" class="diamond">Vista basades en clases</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="body">
+          {% block contenidoquecambia %}
+          {% endblock %}
+        </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+
+</body>
+</html>

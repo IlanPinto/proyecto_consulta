@@ -1,0 +1,12 @@
+{% for jugador in jugadores %}
+
+    <p>{{jugador}}</p>
+    <button>
+        <a href="{% url 'EliminarJugadores' apellido=jugador.apellido %}
+        ">Eliminar</a>
+    </button>
+    <button>
+        <a href="{% url 'ActualizarJugadores' jugador_id=jugador.id %}
+        ">Actualizar</a>
+    </button>
+{% endfor %}

@@ -1,0 +1,24 @@
+{% for jugador in object_list %}
+
+    <ul>
+        <li>
+            {{jugador}}
+
+            <button>
+                <a href="{% url 'Detail' jugador.id %}"> Ver Detalle</a>
+            </button>
+            <button>
+                <a href="{% url 'Delete' jugador.id %}"> Eliminar</a>
+            </button>
+            <button>
+                <a href="{% url 'Update' jugador.id %}"> Actualizar</a>
+            </button>
+
+
+        </li>
+    </ul>
+{% endfor %}
+
+<button>
+    <a href="{% url 'Create' %}"> Crear jugador</a>
+</button>
